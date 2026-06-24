@@ -1,16 +1,51 @@
 body {
-    background-color: black;
+    background-color: white;
+    color: #1b1b1b;
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    background-color: rgb(246, 163, 61);
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin-top: 0;
+}
+
+header ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+header ul li {
+    display: inline-block;
+}
+
+header ul li a {
     color: white;
+    text-decoration: underline;
+    padding: 10px 20px;
+}
+
+header ul li a:visited {
+    color: rgb(45, 45, 45);
+    text-decoration: underline;
+}
+
+header ul li a:hover {
+    color: blue;
+    text-decoration: none;
 }
 
 form {
     padding: 10px;
     background-color: gray;
     border-radius: 10px;
-}
-
-div {
-    color: yellow;
 }
 
 form div {
@@ -21,4 +56,27 @@ form div {
     font-width: bold;
     color: red;
     font-size: 36px;
+}
+
+.padding {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.announcement {
+    background-color: #1c79d1;
+    color: white;
+}
+
+.full-width {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+section img {
+    max-width: 100%;
 }
