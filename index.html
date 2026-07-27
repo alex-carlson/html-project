@@ -2,11 +2,20 @@
 
 <head>
     <title>Armor and Grace</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Armor and Grace official store">
+    <meta name="keywords" content="Faith, Fashion, and more">
+    <meta name="author" content="Alex C">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
 </head>
 
 <body>
@@ -26,20 +35,54 @@
         <p>15% off on orders $40 or more — Use code JOHN3:16</p>
     </div>
 
-    <section class="padding text-center full-width min-height"
+    <section class="padding text-center full-width min-height position-relative"
         style="background-size: cover; background-image: url('https://images.unsplash.com/photo-1498354136128-58f790194fa7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
-        <h2>Summer Sale on now! 🌞😎</h2>
-        <p>Shop our summer collection <a href="#">Here!</a></p>
+        <div class="position-absolute top-50 start-50 translate-middle">
+            <h2>Summer Sale on now! 🌞😎</h2>
+            <p>Shop our summer collection <a href="summer.html">Here!</a></p>
+        </div>
     </section>
 
     <section class="padding text-left full-width color-fill min-height">
         <h2>Browse the full catalog</h2>
-        <p>Need inspiration? Browse and find your new favorite piece!</p>
-    </section>
-
-    <section class="padding text-right full-width min-height">
-        <h2>Sign up for our newsletter!</h2>
-        <p><a href="#">Click Here</a> to sign up to keep up with the latest updates from Armor and Grace!</p>
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?q=80&w=1470&auto=jpg&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        class="d-block w-100" alt="Shirts">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Shirts</h5>
+                        <p><a href="products/shirts.html">Browse All Shirts</a></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1681206659759-565bd4c48b76?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        class="d-block w-100" alt="Accessories">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Accessories</h5>
+                        <p><a href="products/lanyards.html">Browse All Accessories</a></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1649566169356-e47e8d9809e4?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        class="d-block w-100" alt="Hoodies">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Hoodies</h5>
+                        <p><a href="products/hoodies.html">Browse All Hoodies</a></p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </section>
 
     <footer class="full-width padding">
@@ -52,9 +95,13 @@
         </div>
         <div class="float-left third">
             <ul class="social">
-                <li><a href="#"><img src="assets\instagram-brands-solid.png"></a></li>
-                <li><a href="#"><img src="assets\tiktok-brands-solid.png"></a></li>
-                <li><a href="#"><img src="assets\youtube-brands-solid.png"></a></li>
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube youtube"></i></a></li>
             </ul>
         </div>
         <div class="float-left third">
@@ -77,5 +124,8 @@
         alert(name + " Logged in with password: " + password);
     }
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 
 </html>

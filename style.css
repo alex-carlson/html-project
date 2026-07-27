@@ -81,6 +81,14 @@ form div {
     color: white;
 }
 
+.announcement p {
+    margin-bottom: 0;
+}
+
+.carousel-item {
+    max-height: 500px;
+}
+
 .full-width {
     width: 100%;
     box-sizing: border-box;
@@ -109,10 +117,93 @@ section img {
 }
 
 footer {
-    background-color: darkslategray;
-    height: 200px;
+    background-color: black;
+    color: white;
+    height: 130px;
 }
 
-.social img {
-    max-height: 45px;
+footer .social {
+    list-style: none;
+    padding-left: 0;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: rgb(246, 163, 61);
+}
+
+footer .social li {
+    float: left;
+    display: block;
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.social {
+    font-size: 32px;
+}
+
+.social .youtube:hover {
+    color: red;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.lookbook {
+    margin-top: 50px !important;
+}
+
+.lookbook img {
+    width: 100%;
+}
+
+.lookbook>div {
+    margin-bottom: 25px;
+    box-sizing: border-box;
+}
+
+.products article img {
+    max-height: 400px;
+}
+
+.products article {
+    height: 500px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.products article:nth-child(odd) {
+    background-color: #c0c0c0;
+}
+
+.products article h4 {
+    color: green;
+}
+
+.products article h4 s {
+    color: gray;
+}
+
+.right {
+    float: right;
+    display: block;
+}
+
+.left {
+    float: left;
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .products article {
+        height: 600px;
+    }
 }

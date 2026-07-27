@@ -1,0 +1,114 @@
+<html>
+
+<head>
+    <title>Armor and Grace</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Browse our new summer collection">
+    <meta name="keywords" content="Faith, Fashion, and more">
+    <meta name="author" content="Alex C">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <!-- <img src="logo.png" alt="Logo"> -->
+        <h1>Armor and Grace</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="tables.html">Sizing Chart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="padding text-center announcement">
+        <p>15% off on orders $40 or more — Use code JOHN3:16</p>
+    </div>
+
+    <section class="padding text-center">
+        <h1>Armor and Grace Summer Style</h1>
+        <div class="row lookbook" data-masonry='{"percentPosition": true }'>
+            <div class="col-6 col-lg-3">
+                <figure>
+                    <h3>All new styles</h3>
+                    <figcaption>From back to school, to the beach.</figcaption>
+                    <img src="https://images.unsplash.com/photo-1609709295948-17d77cb2a69b?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                </figure>
+            </div>
+            <div class="col-6 col-lg-3">
+                <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=873&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="">
+            </div>
+            <div class="col-6 col-lg-3">
+                <img src="https://images.unsplash.com/photo-1657651859649-b7fad8bf3871?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="">
+            </div>
+            <div class="col-6 col-lg-3">
+                <img src="https://images.unsplash.com/photo-1563884870649-b696c3bf12e9?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="">
+            </div>
+            <div class="col-6 col-lg-3">
+                <img src="https://images.unsplash.com/photo-1577744486770-020ab432da65?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="">
+            </div>
+        </div>
+    </section>
+
+    <footer class="full-width padding">
+        <div class="float-left third">
+            <form>
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email">
+                <input type="submit" value="Sign Up" onclick="OnButtonClick()">
+            </form>
+        </div>
+        <div class="float-left third">
+            <ul class="social">
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="float-left third">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="tables.html">Sizing Chart</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+<script>
+    console.log("Hello world");
+
+    function OnButtonClick() {
+        var name = document.getElementById("username").value
+        var password = document.getElementById("password").value
+        console.log(name);
+        alert(name + " Logged in with password: " + password);
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+    integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+    async></script>
+
+</html>
