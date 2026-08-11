@@ -36,59 +36,8 @@
     </div>
 
     <section class="padding full-width products">
-        <h1>Hoodies</h1>
-        <article>
-            <div class="left">
-                <img src="https://images.unsplash.com/photo-1578768079052-aa76e52ff62e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Product 1 Image" />
-            </div>
-
-            <div class="left padding">
-                <h3>Product 1</h3>
-                <h4><s>$59.99</s> $29.99</h4>
-                <p>Description of the product</p>
-                <button data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart</button>
-            </div>
-        </article>
-        <article>
-            <div class="left">
-                <img src="https://images.unsplash.com/photo-1578768079052-aa76e52ff62e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Product 1 Image" />
-            </div>
-
-            <div class="left padding">
-                <h3>Product 2</h3>
-                <h4>$29.99</h4>
-                <p>Description of the product</p>
-                <button data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart</button>
-            </div>
-        </article>
-        <article>
-            <div class="left">
-                <img src="https://images.unsplash.com/photo-1578768079052-aa76e52ff62e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Product 1 Image" />
-            </div>
-
-            <div class="left padding">
-                <h3>Product 3</h3>
-                <h4>$29.99</h4>
-                <p>Description of the product</p>
-                <button data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart</button>
-            </div>
-        </article>
-        <article>
-            <div class="left">
-                <img src="https://images.unsplash.com/photo-1578768079052-aa76e52ff62e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Product 1 Image" />
-            </div>
-
-            <div class="left padding">
-                <h3>Product 4</h3>
-                <h4>$29.99</h4>
-                <p>Description of the product</p>
-                <button data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart</button>
-            </div>
-        </article>
+        <h1>Accessories</h1>
+        <div id="product-list"></div>
     </section>
 
     <footer class="full-width padding">
@@ -146,6 +95,39 @@
         console.log(name);
         alert(name + " Logged in with password: " + password);
     }
+
+    var data = [
+        {
+            "title": "United Tractors Lanyard",
+            "price": "$8.99",
+            "image": "https://images.unsplash.com/photo-1769142726489-6f40b1c575c5?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+            "title": "United Tractors Lanyard Early Bird",
+            "price": "$6.99",
+            "image": "https://images.unsplash.com/photo-1769142726489-6f40b1c575c5?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+            "title": "Everyday Carry Bundle",
+            "price": "$39.99",
+            "image": "https://images.unsplash.com/photo-1506169894395-36397e4aaee4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+    ];
+
+    document.getElementById("product-list").innerHTML = data.map(
+        product => `
+            <article>
+                <div class="left">
+                    <img src="${product.image}" alt="${product.title}" />
+                </div>
+                <div class="left padding">
+                    <h4>${product.title}</h4>
+                    <p>${product.price}</p>
+                    <button data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Cart</button>
+                </div>
+            </article>
+        `
+    ).join("");
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

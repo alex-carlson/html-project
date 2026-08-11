@@ -132,7 +132,7 @@ footer a {
 }
 
 footer a:hover {
-    color: rgb(246, 163, 61);
+    color: #f6a33d;
 }
 
 footer .social li {
@@ -172,6 +172,10 @@ footer ul {
 
 .products article img {
     max-height: 400px;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
 }
 
 .products article {
@@ -190,6 +194,20 @@ footer ul {
 
 .products article h4 s {
     color: gray;
+}
+
+.products article button {
+    border-radius: 9999px;
+    border: solid 2px #f6a33d;
+    padding: 12px 20px;
+    background: transparent;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.products article button:hover {
+    background-color: #f6a33d;
+    color: white;
 }
 
 .right {
