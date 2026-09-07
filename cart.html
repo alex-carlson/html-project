@@ -1,0 +1,138 @@
+<html>
+
+<head>
+    <title>Armor and Grace | Sizing Chart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header class="cart-header">
+        <!-- <img src="logo.png" alt="Logo"> -->
+        <h1><a href="index.html">Armor and Grace</a></h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Products</a>
+                    <ul>
+                        <li><a href="./products/shirts.html">Shirts</a></li>
+                        <li><a href="./products/hoodies.html">Hoodies</a></li>
+                        <li><a href="./products/accessories.html">Accessories</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="tables.html">Menu</a></li>
+                <li>
+                    <a href="cart.html">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="text-center announcement">
+        <p>15% off on orders $40 or more — Use code JOHN3:16</p>
+    </div>
+    <section class="full-width padding">
+        <h1>Your Cart (<span id="cartHeaderCount">0</span>)</h1>
+        <div id="cart-contents">
+            <div class="padding cart-item">
+                <h2>Product Name</h2>
+                <p>Product Description</p>
+                <p>Price: $29.99</p>
+                <button onclick="removeItem()">Remove</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="full-width padding">
+        <div class="float-left third">
+            <form>
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email">
+                <input type="submit" value="Sign Up" onclick="OnButtonClick()">
+            </form>
+        </div>
+        <div class="float-left third">
+            <ul class="social">
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="float-left third">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="tables.html">Sizing Chart</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+<script>
+    var cartCount = Number(localStorage.getItem("cartCount")) || 0;
+    document.getElementById("cart-count").textContent = cartCount;
+    document.getElementById("cartHeaderCount").textContent = cartCount;
+
+    function OnButtonClick() {
+        cartCount++;
+        localStorage.setItem("cartCount", cartCount);
+        document.getElementById("cart-count").textContent = cartCount;
+    }
+
+    function removeItem() {
+        if (cartCount > 0) {
+            cartCount--;
+            localStorage.setItem("cartCount", cartCount);
+            document.getElementById("cart-count").textContent = cartCount;
+            loadCart();
+            document.getElementById("cart-count").textContent = cartCount;
+            document.getElementById("cartHeaderCount").textContent = cartCount;
+        }
+    }
+
+    function loadCart() {
+        var cartContents = document.getElementById("cart-contents");
+
+        cartContents.innerHTML = "";
+
+        if (cartCount === 0) {
+            // the cart is empty
+            cartContents.innerHTML = "<p>The cart is empty.</p>";
+            return;
+        }
+
+        var html = "";
+
+        for (var i = 0; i < cartCount; i++) {
+            // build our html
+
+            html += `<div class="padding cart-item">
+                <h2>Product Name</h2>
+                <p>Product Description</p>
+                <p>Price: $29.99</p>
+                <button onclick="removeItem()">Remove</button>
+            </div>`;
+        }
+
+        cartContents.innerHTML = html;
+    }
+    loadCart();
+</script>
+
+</html>

@@ -3,6 +3,7 @@ body {
     color: #1b1b1b;
     font-family: "Roboto Condensed", sans-serif;
     margin: 0;
+    padding-top: 240px;
 }
 
 header {
@@ -11,13 +12,21 @@ header {
     padding: 15px;
     box-sizing: border-box;
     position: fixed;
+    top: 40px;
+    left: 0;
     z-index: 10;
     box-shadow: 0 0 30px #000;
 }
 
-header h1 {
+header h1 a {
     margin-top: 0;
     color: white;
+    text-decoration: none;
+    transition: 1s;
+}
+
+header h1 a:hover {
+    margin-left: 20px;
 }
 
 header ul {
@@ -34,10 +43,11 @@ header ul li a {
     color: white;
     text-decoration: underline;
     padding: 10px 20px;
+    transition: 1s;
 }
 
 header ul li a:visited {
-    color: rgb(45, 45, 45);
+    color: white;
     text-decoration: underline;
 }
 
@@ -67,6 +77,11 @@ form div {
     box-sizing: border-box;
 }
 
+.padding-xl {
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
 .text-center {
     text-align: center;
 }
@@ -80,8 +95,14 @@ form div {
 }
 
 .announcement {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 11;
     background-color: #1c79d1;
     color: white;
+    padding: 8px !important;
 }
 
 .announcement p {
@@ -236,4 +257,40 @@ footer ul {
     .products article {
         height: 600px;
     }
+}
+
+.cart-header {
+    background: #f2d918;
+    background: linear-gradient(0deg, #f2d918 0%, #e34805 100%);
+}
+
+.cart-header h1 a {
+    color: black;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(246, 163, 61);
+    color: white;
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+.dropdown ul li {
+    padding: 10px 20px;
+}
+
+.dropdown:hover ul {
+    display: block;
+}
+
+.cart-item:nth-child(odd) {
+    background-color: #e0e0e0;
 }

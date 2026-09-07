@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
     <style>
         table,
@@ -16,6 +17,7 @@
             border-width: 1px;
             border-style: solid;
             color: white;
+            padding: 8px;
         }
     </style>
 </head>
@@ -23,19 +25,26 @@
 <body>
     <header>
         <!-- <img src="logo.png" alt="Logo"> -->
-        <h1>Armor and Grace</h1>
+        <h1><a href="index.html">Armor and Grace</a></h1>
 
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="tables.html">Menu</a></li>
+                <li>
+                    <a href="cart.html">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
     <section class="full-width color-fill padding" style="padding-top: 140px;">
-        <h1>Sizing Chart</h1>
+        <h1>Sizing Charts</h1>
         <div>
+            <h2>Adult Shirts</h2>
             <table>
                 <tr>
                     <td>
@@ -70,6 +79,45 @@
                     </td>
                     <td>41" - 42"</td>
                     <td>29"</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h2>Children's Shirts</h2>
+            <table>
+                <tr>
+                    <td>
+                        <h3>Size</h3>
+                    </td>
+                    <td>
+                        <h3>Chest</h3>
+                    </td>
+                    <td>
+                        <h3>Body Length</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>0/3m</p>
+                    </td>
+                    <td>17"</td>
+                    <td>17.5"</td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>12/18m</p>
+                    </td>
+                    <td>
+                        <p>19.75"</p>
+                    </td>
+                    <td>20.25"</td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>8</p>
+                    </td>
+                    <td>26"</td>
+                    <td>24"</td>
                 </tr>
             </table>
         </div>
